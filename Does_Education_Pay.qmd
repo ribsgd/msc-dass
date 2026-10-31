@@ -1,0 +1,144 @@
+---
+title: "Does Education Pay?"
+subtitle: "Exploring University Qualifications, Employment and Earnings Differences in the UK"
+author: "Rebecca Gemlo-Dunstan (14416054)"
+date: "November 2026"
+format:
+  html:
+    theme: cosmo
+    toc: true
+    toc-depth: 2
+    number-sections: false
+    code-fold: true
+    code-summary: "Show analysis code"
+    embed-resources: true
+execute:
+  echo: false
+  warning: false
+  message: false
+---
+
+**Research progress**
+
+This report is a working document documenting the development of the research project. The research question and initial variable selection have been established and exploratory data analysis is underway. Sections will be updated as the data is cleaned, analysed and interpreted.
+
+# Introduction
+
+University education is often presented as an investment in future career opportunities and financial security. However, with the cost of higher education and differences in employment and earnings, it is worth examining whether having a university qualification is associated with better outcomes in the UK labour market.
+
+This report explores the relationship between academic qualifications, employment and earnings, considering whether these patterns differ between men and women.
+
+# The Data
+
+## Understanding Society
+
+This analysis uses Wave 14 of Understanding Society, the UK Household Longitudinal Study.
+
+## Variables
+
+Five varibales have been selected from the Wave 14 individual interview dataset. These variables were chosen because they directly relate to the research question.
+
+| Variable      | Description                    | Purpose                       |
+|:-----------------------|:-----------------------|:-----------------------|
+| `n_qfhigh_dv` | Highest academic qualification | Identify qualification groups|
+|`n_jbstat`|Current economic activity|Examine employment outcomes|
+|`n_fimnlabgrs_dv`|Gross monthly labour income|Compare earnings|
+|`n_sex_dv`|Sex|Compare men and women|
+|`n_age_dv`|Age|Explore age-related differences|
+
+### Educational attainment
+
+**Variable: `n_qfhigh_dv`**
+
+This variable records the respondent's highest academic qualification.
+
+The categories include higher degrees, first degress, diplomas in higher education, teaching qualifications, nursing and medical qualifications, A-levels and GCSEs.
+
+For this research, the inital defintion of a graduate will include respondents whose highest academic qualification is recorded as:
+
+- Code 1: Higher degree
+- Code 2: First degree or equivalent
+- Code 6: Other higher degree
+
+This definiton will be reviewed against the research objectives before the final analysis. Respondents with vocational qualifications will not automatically be classified as graduates.
+
+### Employment status
+
+**Variable: `n_jbstat`**
+
+This variable records the respondent's current economic activity status.
+
+It distinguishes between categories including paid employment, self-employment, unemployed, retirement, full-time education, family care and long-term sickness or disability.
+
+These categories will allow the analysis to distinguish unemployment from economic inactivity, rahter than treating everyone who is not employed as unemployed.
+
+### Labour income
+
+**Variable: `n_fimnlabgrs_dv`**
+
+This variable measures total estimated gross monthly labour income.
+
+It has been selected to explore differences in income from work between qualification groups and between men and women.
+
+Initial exploration identified 16,275 respondents with a recorded value of zero. The variable also contains negative values and special missing-value codes. These will be investigates before the earnings analysis is undwertake.
+
+
+### Sex
+
+**Variable: `n_sex_dv`**
+
+This variable records the respondent's sex, with two substantive categories:
+
+- Code 1: Male
+- Code 2: Female
+
+It will be used to compare employment and earnings patterns between men and women. The terminology in the report will reflect the variable actually collected by the survey.
+
+### Age
+
+**Variable: `n_age_dv`**
+
+This variable records the respondent's age at the time of interview.
+
+Age will be included to explore whether employment and earnings patterns differ across stages of working life. It may also help contextualise differences between qualification groups.
+
+## Initial data exploration
+
+The selected variables were extracted from the original dataset, producing a research dataset containing 35,471 obserations and five variables.
+
+Initial exploration of gross monthly labout income prouced the following summary:
+
+|Statistic|Value|
+|:--|--:|
+|Minimum|-£3,333.30|
+|Lower quartile|£0.00|
+|Median|£541.70|
+|Mean|£1,405.90|
+|Upper quartile|£2,307.50|
+|Maximum|£16,666.00|
+
+The mean is considerably higher than the median, suggesting that the distribution may be positively skewed.
+
+A total of 16,275 observations have a recorded income value of zero. Further investigation is required to establish the employment circumstances associated with these values and to identify how special missing-value codes should be handled.
+
+These findings will inform the data cleaning decisions and the choice of appropriate summary statistics for the final analysis.
+
+# Methodology
+
+The analysis will compare employment and earnings outcomes between people with degree-level qualifications and those without.
+
+It will also explore differences between men and women and consider whether earnings patterns vary across age groups.
+
+The analysis will identify associations rather than establish causal relationships.
+
+# Findings
+
+Results and visualisations will be added here once the data has been prepared and analysed.
+
+# Discussion
+
+The findings will be interpreted in relation to the research question, considering possible explanations and limitiations.
+
+# Conclusion
+
+A summary of the key findings and thier implications will be presented here.
